@@ -12,20 +12,34 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
+      {
+        text: 'Projects', items: [
+          { text: 'Item A', link: '/item-1' },
+          { text: 'Item B', link: '/item-2' }
+        ],
+      }
     ],
-
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Blogs',
         items: [
           { text: 'Showing names in SOLOQ', link: '/Showing-names-in-soloq' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: '¿Como funcionan los sistemas del transporte publico?', link: '/How-public-transport-system-work' }
+        ]
+      },
+      {
+        text: 'Projects',
+        items: [
+          { text: 'Showing names in SOLOQ', link: '/Showing-names-in-soloq' },
+          { text: '¿Como funcionan los sistemas del transporte publico?', link: '/How-public-transport-system-work' }
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/xBaank' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/xBaank' }
     ]
-  }
+  },
+  lastUpdated: true
 })

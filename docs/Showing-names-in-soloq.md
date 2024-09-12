@@ -6,9 +6,14 @@ description : "Intercepting RTMP messages between lol client and server"
 
 # Showing names in SOLOQ champ select
 
-![Banner]
+![Banner](/Reversing-engineering-lol/league.jpg)
 
-> This exploit was discovered by [Hawolt](https:/# Markdown Extension Examples
+> This exploit was discovered by [Hawolt](https://github.com/hawolt), You can check his version here: [Oldseason](https://github.com/Riotphobia/Oldseason)
+
+Some time ago, Riot removed the possibility to see your teammates names in SOLOQ champ select. This was very useful because you could see their op.gg.
+But Riot started to adopt a more private policy, allowing players to hide their stats from sites like op.gg and hiding names in champ select.
+
+After that, some people still could see their teammates names in champ select, and it was because Riot didn't actually removed the ability to see names, they just added a new flag to the RTMP messages that were sent between the client and the server saying if the player name is hidden or not.
 
 ## RTMP
 RTMP is a protocol used by Adobe Flash Player to communicate between a server and a client with video, audio and data. *League of Legends* client was built using Adobe Flash Player, then rewritten with HTML, CSS and javascript, and since then it started to migrate into a REST API model. But there are still some parts that use RTMP to communicate with the server.
@@ -500,7 +505,7 @@ private fun unmask(nodes: List<Amf0Node>): List<Amf0Node> {
 
 And that's it! Now we can run the proxy, connect to it by changing the `system.yaml` config, and see allies names.
 
-![Unmasked]
+![Unmasked](/Reversing-engineering-lol/unmasked.png)
 
 Some parts of the code are omitted, like the handshake, RTMP parsing, AMF0 decoding and encoding.
 
