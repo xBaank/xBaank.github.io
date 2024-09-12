@@ -26,13 +26,6 @@ export default defineConfig({
           { text: 'Showing names in SOLOQ', link: '/Showing-names-in-soloq' },
           { text: '¿Como funcionan los sistemas del transporte publico?', link: '/How-public-transport-system-work' }
         ]
-      },
-      {
-        text: 'Projects',
-        items: [
-          { text: 'Showing names in SOLOQ', link: '/Showing-names-in-soloq' },
-          { text: '¿Como funcionan los sistemas del transporte publico?', link: '/How-public-transport-system-work' }
-        ]
       }
     ],
 
